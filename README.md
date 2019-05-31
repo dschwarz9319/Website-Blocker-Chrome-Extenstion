@@ -1,4 +1,5 @@
 # INSuRE Chrome Extension
+Group Project by: Daniel Schwarz, Taylor McLaughlin, Chance Brilz, Deep Patel, and Anthony Panei
 ## General
 ThirdEye Detection is an extension built for the popular web browser Google Chrome. The point of the extension is to filter malcious URLs through three tiers of detection. 
 - First we check a user-defined blacklist/whitelist which is stored on the browser's local storage.
