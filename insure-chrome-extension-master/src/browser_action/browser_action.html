@@ -1,0 +1,33 @@
+<!doctype html>
+<link href="stylesheet.css" rel="stylesheet" type="text/css">
+
+<head>
+	<title>ThirdEye Detection</title>
+</head>
+
+<body>
+	<div id="mainPopup">
+		<div class="header section">
+			<h1 class="logo">
+				<img src="/icons/thirdeye_icon_v2_150.png" alt="ThirdEye" class="logo-icon">
+				ThirdEye Detection <span class="version">Version 0.0.1</span>
+			</h1>
+		</div>
+		<div class="desc section">
+			<p>Welcome to ThirdEye<br><small>AI-powered malicious URL detector</small></p>
+		</div>
+		<div class="toggle-switch section">
+			<label class="switch">
+				<input id="toggle-extension" type="checkbox" checked>
+				<span class="slider round"></span>
+			</label>
+			<label for="toggle-extension">Enable/Disable Extension</label>
+		</div>
+		<div class="settings-buttons section">
+			<a href="/src/browser_action/settings_page.html" target="_blank" class="btn btn-secondary btn-sm">Local Preferences</a>
+		</div>
+	</div>
+	<script src="/src/browser_action/browser_action.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+  <title>Settings</title>
+  <link href="stylesheet.css" rel="stylesheet" type="text/css">
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.content {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+.center {
+  text-align: center;
+  border: 3px solid green;
+}
+</style>
+
+<body class="content" >
+  <div id="local_pref">
+    <h1>Local Settings</h1> <br><br>
+
+      <div class="settingsRow">
+        <div class="settingsCol">
+            <h3>Whitelist</h3>
+            <h6>Add one or more URLs:</h6>
+            <textarea id = "local_whitelist_text" name="local_whitelist" rows="4" value=""></textarea>
+            <button id = "submit_to_whitelist_btn" class = "button">Submit</button>
+            <div>
+                <ul id="local_whitelist_table">
+                  <li> </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="settingsCol">
+              <h3>Blacklist</h3>
+              <h6>Add one or more URLs:</h6>
+              <textarea id="local_blacklist_text" name="local_blacklist" rows = "4" value=""></textarea>
+              <button id="submit_to_blacklist_btn" class = "button">Submit</button>
+              <div>
+                <ul id="local_blacklist_table">
+                  <li> </li>
+                </ul>
+              </div>
+
+        </div>
+      </div>
+  </div>
+  <script src = "/src/browser_action/js/settings_page.js"></script>
+
+</body>
+
+</html>

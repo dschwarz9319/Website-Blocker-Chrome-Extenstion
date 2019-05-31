@@ -1,0 +1,28 @@
+//Url Detection Pseudo-Code
+
+//User clicks link or types address 
+String User_Input = get(url)
+Boolean User_Confirmation = true
+
+//Runs User_Input through Blacklist
+loop from 0 to Blacklist.Length
+    if (User_Input == Blacklist[Element])
+        JS Alert Window Prompt
+        "This Url is on our blacklist, are you sure you wish to continue?"
+        get User_Confirmation
+    if (User_Confirmation == false)
+        Halt Access to Url
+
+//Runs User_Input through ML Component
+if (ML(UserInput) == false && Check_Whitelist == false)
+    JS Alert Window Prompt
+    "This Url may lead to a malicious website, would you like to blacklist Url?"
+    get User_Confirmation
+    if  (User_Confirmation == true)
+        Add_To_Blacklist(User_URL)
+    else 
+        JS Alert Window Prompt
+        "Would you like to add this url to the whitelist?"
+        get User_Confirmation
+        if (User_Confirmation == true)
+            Add_To_Whitelist(User_URL)

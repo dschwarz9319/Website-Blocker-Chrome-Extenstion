@@ -1,0 +1,32 @@
+{
+  "name": "INSuRE Chrome Extension",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "An extension for detecting malicious websites.",
+  "icons": {
+    "19": "icons/thirdeye_icon_v2_19.png",
+    "128": "icons/thirdeye_icon_v2_128.png",
+    "150": "icons/thirdeye_icon_v2_150.png"
+  },
+  "background": {
+    "scripts": ["src/bg/background.js"],
+    "persistent": true
+  },
+  "options_page": "src/browser_action/settings_page.html",
+  "browser_action": {
+    "default_icon": "icons/thirdeye_icon_v2_19.png",
+    "default_title": "browser action demo",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": ["contentSettings", "cookies", "https://*/*", "tabs"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/*"],
+      "css": ["src/inject/inject.css"]
+    },
+    {
+      "matches": ["https://www.google.com/*"],
+      "js": ["src/inject/inject.js"]
+    }
+  ]
+}
